@@ -1,0 +1,62 @@
+/* SubmitBlog.module.css */
+
+.wrapper {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    min-height: 150px;
+    resize: vertical;
+}
+
+.photoPrompt {
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.submit {
+    background-color: #3861fb;
+    color: #fff;
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.submit:hover:enabled {
+    background-color: #829dff;
+}
+
+.submit:disabled {
+    background-color:  #829dff;
+    cursor: not-allowed;
+}

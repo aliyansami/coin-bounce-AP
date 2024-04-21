@@ -1,0 +1,86 @@
+.navbar{
+    display: flex; /*all items will be in a row*/
+    justify-content: space-around; /*padding will be provied form sides*/
+    align-items: center;/*vertically centered*/
+    padding: 20px 0; /*padding form top to bottom will be 20 and from left-to-right will be 0*/
+    margin:20px auto;/*horizontally centered*/
+    width: 80%;
+
+}
+
+.logo{
+    font-size: 32px;
+    font-weight: 800;
+    color: rgb(237, 236, 230);
+}
+
+/*active style: used on that element on whoose path we are currently present on, and non-active styles
+will be used on all oth paths*/
+
+.activeStyle{
+    color:#3861fb;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.inActiveStyle{
+text-decoration: none;
+color: rgb(237, 236, 230);
+font-size: 22px;
+font-weight: bold;
+}
+
+.logInButton{
+border: none;
+outline:none;
+border-radius: 10px; /*for round effect*/
+padding:10px 15px;
+cursor:pointer;
+font-weight:bold;
+text-decoration: none;
+}
+
+.logInButton:hover{
+color:black;
+background-color: #f3f3f3;
+}
+
+.signUpButton{
+margin-left: 10px; /*spacing between two buttons*/
+background-color: #3861fb;
+color:white;
+border: none;
+outline:none; 
+border-radius: 10px; /*for round effect*/
+padding:10px 15px;
+cursor:pointer;
+font-weight:bold;
+text-decoration: none;  
+}
+
+.signUpButton:hover{
+    background-color: #144ffd;
+}
+
+.signOutButton{
+    margin-left: 10px;
+    background-color: #ea3943;
+    color:white;
+    border: none;
+    outline:none; 
+    border-radius: 10px; /*for round effect*/
+    padding:10px 15px;
+    cursor:pointer;
+    font-weight:bold;
+    text-decoration: none;  
+}
+
+.signOutButton:hover{
+    background-color: #e01822;  
+}
+
+.seperator{
+    height: 1px;
+    margin: 5px;
+    background: linear-gradient(to right,transparent,#9ba3c2,transparent);
+}

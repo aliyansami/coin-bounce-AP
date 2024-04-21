@@ -1,0 +1,193 @@
+/* BlogDetails.module.css
+
+.detailsWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+  }
+  
+  .left {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .photo img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .content {
+    margin-top: 20px;
+  }
+  
+  .controls {
+    margin-top: 20px;
+  }
+  
+  .edit,
+  .delete {
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .right {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .commentsWrapper {
+    margin-top: 20px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .postCommentButton {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+   */
+
+
+.detailsWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    gap:50px;
+    margin:10px 50px;
+}
+
+.left{
+    display: flex;
+    flex-direction:column;
+    width:40%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 25px 0px;
+}
+
+.meta{
+display: flex;
+gap:25px;
+justify-content: flex-start;
+}
+
+.photo{
+    margin:10px;
+}
+
+.photo img{
+    border-radius:10px;
+}
+
+.controls{
+    display:flex;
+    width: 100px;
+    justify-content: flex-end;
+    margin-top:20px;
+}
+
+.right{
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.editButton{
+    margin-left: 10px;
+    background-color: #16c784;
+    color:#fff;
+    border:none;
+    outline:none;
+    border-radius: 10px;
+    padding:10px 15px;
+    cursor:pointer;
+    font-weight: bold;
+    height: fit-content;
+}
+
+.editButton :hover{
+    background-color: #17ae74;
+}
+
+
+
+.deleteButton{
+    margin-left: 10px;
+    background-color: #ea3943;
+    color:#fff;
+    border:none;
+    outline:none;
+    border-radius: 10px;
+    padding:10px 15px;
+    cursor:pointer;
+    font-weight: bold;
+    height: fit-content;
+}
+
+.deleteButton :hover{
+    background-color: #e01822;
+}
+
+
+.postCommentButton{
+    background-color: #3861fb;
+    color:#fff;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    font-size:15px;
+    padding:10px 40px;
+    height:fit-content;
+}
+
+.postCommentButton :hover{
+    background-color: #1f4ffd;
+}
+
+.input{
+    border:none;
+    padding: 10px 20px;
+    color: #bebcc0;
+    font-size:18px;
+    border-radius: 10px;
+    outline: none;
+    margin: 15px 10px;
+    border:1px solid #fff;
+    flex: 1px;
+}
+
+.postComment{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.commentsWrapper{
+
+}
