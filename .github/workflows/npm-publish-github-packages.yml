@@ -37,6 +37,17 @@ jobs:
           cd frontend
           npm start &
 
+      - name: Install ESLint
+        run: |
+          cd backend
+          npm install eslint --save-dev
+        
+      - name: Run ESLint
+        run: |
+          cd backend
+          npm eslint . --ext .js, .jsx, 
+      
+
      
 
 
