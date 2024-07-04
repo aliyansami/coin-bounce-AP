@@ -45,7 +45,7 @@ jobs:
       - name: Run ESLint
         run: |
           cd backend
-          npm eslint . --ext .js, .jsx, 
+          npx eslint . --ext .js, .jsx, 
       
 
      
