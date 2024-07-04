@@ -21,23 +21,23 @@ jobs:
         with:
           node-version: '14'
 
-      # Backend
-      - name: Install backend dependencies
-        run: npm install
-        working-directory: backend  # Path relative to the root of the repository
+      # # Backend
+      # - name: Install backend dependencies
+      #   run: npm install
+      #   working-directory: backend  # Path relative to the root of the repository
 
-      - name: Start backend
-        run: npm run dev
-        working-directory: backend  # Path relative to the root of the repository
+      # - name: Start backend
+      #   run: npm run dev
+      #   working-directory: backend  # Path relative to the root of the repository
 
-      # Frontend
-      - name: Install frontend dependencies
-        run: npm install
-        working-directory: frontend  # Path relative to the root of the repository
+      # # Frontend
+      # - name: Install frontend dependencies
+      #   run: npm install
+      #   working-directory: frontend  # Path relative to the root of the repository
 
-      - name: Build frontend application
-        run: npm run build
-        working-directory: frontend  # Path relative to the root of the repository
+      # - name: Build frontend application
+      #   run: npm run build
+      #   working-directory: frontend  # Path relative to the root of the repository
 
       # Optionally, you can run frontend tests if needed
       #- name: Run frontend tests
