@@ -46,8 +46,7 @@ jobs:
         
       - name: Run ESLint
         run: |
-          cd backend
-          npx eslint authController
+          npx eslint .
       
 
      
