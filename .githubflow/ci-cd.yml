@@ -3,43 +3,36 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # Branch to trigger on push
+      - main
   pull_request:
     branches:
-      - main  # Branch to trigger on pull request
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Operating system environment
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2  # Action to checkout the repository
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2  # Action to set up Node.js
+        uses: actions/setup-node@v2  # Action to set up Node.js (example)
+
+      - name: Install dependencies
+        run: npm install  # Example command to install dependencies
+
+      - name: Run tests
+        run: npm test  # Example command to run tests
+
+      - name: Build application
+        run: npm run build  # Example command to build the application
+
+      - name: Package artifact
+        run: zip -r app.zip ./dist  # Example command to package the artifact
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
         with:
-          node-version: '14'
-
-      # # Backend
-      # - name: Install backend dependencies
-      #   run: npm install
-      #   working-directory: backend  # Path relative to the root of the repository
-
-      # - name: Start backend
-      #   run: npm run dev
-      #   working-directory: backend  # Path relative to the root of the repository
-
-      # # Frontend
-      # - name: Install frontend dependencies
-      #   run: npm install
-      #   working-directory: frontend  # Path relative to the root of the repository
-
-      # - name: Build frontend application
-      #   run: npm run build
-      #   working-directory: frontend  # Path relative to the root of the repository
-
-      # Optionally, you can run frontend tests if needed
-      #- name: Run frontend tests
-      #  run: npm test
-      #  working-directory: frontend  # Path relative to the root of the repository
+          name: my-app-artifact
+          path: app.zip  # Path to the artifact to upload
