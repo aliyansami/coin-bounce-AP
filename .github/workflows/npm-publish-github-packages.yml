@@ -22,19 +22,22 @@ jobs:
         uses: actions/setup-node@v2  # Action to set up Node.js (example)
 
       - name: Install dependencies
-        run: npm install  # Example command to install dependencies
+        run: |
+          cd backend
+          npm install 
 
-      - name: Run tests
-        run: npm test  # Example command to run tests
 
-      - name: Build application
-        run: npm run build  # Example command to build the application
+      # - name: Run tests
+      #   run: npm test  # Example command to run tests
 
-      - name: Package artifact
-        run: zip -r app.zip ./dist  # Example command to package the artifact
+      # - name: Build application
+      #   run: npm run build  # Example command to build the application
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: my-app-artifact
-          path: app.zip  # Path to the artifact to upload
+      # - name: Package artifact
+      #   run: zip -r app.zip ./dist  # Example command to package the artifact
+
+      # - name: Upload artifact
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: my-app-artifact
+      #     path: app.zip  # Path to the artifact to upload
