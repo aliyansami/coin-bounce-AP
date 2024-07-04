@@ -5,10 +5,10 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # Branch to trigger on push
+      - main  
   pull_request:
     branches:
-      - main  # Branch to trigger on pull request
+      - main  
 
 jobs:
   build:
@@ -16,10 +16,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2  # Action to checkout the repository
+        uses: actions/checkout@v2  
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2  # Action to set up Node.js (example)
+        uses: actions/setup-node@v2  
 
       - name: Install dependencies
         run: |
@@ -27,11 +27,18 @@ jobs:
           npm install 
 
 
-      # - name: Run tests
-      #   run: npm test  # Example command to run tests
+     
 
-      # - name: Build application
-      #   run: npm run build  # Example command to build the application
+      - name: Build Frontend
+        run: |
+          cd backend
+          npm run dev
+
+      - name: Build Backend
+        run: |
+          cd frontend
+          npm start
+
 
       # - name: Package artifact
       #   run: zip -r app.zip ./dist  # Example command to package the artifact
