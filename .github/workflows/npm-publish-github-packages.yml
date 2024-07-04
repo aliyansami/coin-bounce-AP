@@ -29,15 +29,13 @@ jobs:
 
       - name: Build Backend
         run: |
-            cd frontend
-            npm install
-            npm start
+            cd backend
+            npm run dev &
 
       - name: Build Frontend
         run: |
-          cd backend
-          npm install
-          npm run dev
+          cd frontend
+          npm start &
 
      
 
