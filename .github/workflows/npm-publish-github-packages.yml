@@ -32,12 +32,14 @@ jobs:
       - name: Build Frontend
         run: |
           cd backend
-          npm run dev
+          npm install
+          sudo npm run dev
 
       - name: Build Backend
         run: |
           cd frontend
-          npm start
+          npm install
+          sudo npm start
 
 
       # - name: Package artifact
