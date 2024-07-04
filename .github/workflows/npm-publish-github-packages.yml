@@ -27,19 +27,19 @@ jobs:
           npm install 
 
 
-     
+      - name: Build Backend
+        run: |
+            cd frontend
+            npm install
+            npm start
 
       - name: Build Frontend
         run: |
           cd backend
           npm install
-          sudo npm run dev
+          npm run dev
 
-      - name: Build Backend
-        run: |
-          cd frontend
-          npm install
-          sudo npm start
+     
 
 
       # - name: Package artifact
