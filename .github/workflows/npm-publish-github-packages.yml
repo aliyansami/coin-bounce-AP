@@ -48,7 +48,16 @@ jobs:
         run: |
           npx eslint .
       
+      
+      - name: Build Backend
+        run: |
+            cd backend
+            npm run dev &
 
+      - name: Build Frontend
+        run: |
+          cd frontend
+          npm start &
      
 
 
