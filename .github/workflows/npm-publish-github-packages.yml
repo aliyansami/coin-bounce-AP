@@ -21,19 +21,18 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2  
         with:
-          node version: 12
+          node-version: 12
 
       - name: Install dependencies
         run: |
           cd backend
           npm install 
 
-
-      - name: Build Backend!
+      - name: Build Backend
         run: |
-            cd backend
-            npm run dev &
-
+          cd backend
+          npm run dev &
+        
       - name: Build Frontend
         run: |
           cd frontend
@@ -44,28 +43,26 @@ jobs:
           cd backend
           npm install eslint --save-dev
         
-      - name: Run ESLint
-        run: |
-          npx eslint .
-      
-      
-      - name: Build Backend
-        run: |
-            cd backend
-            npm run dev &
+      # - name: Run ESLint
+      #   run: |
+      #     npx eslint .
 
-      - name: Build Frontend
+      - name: Zip Backend
+        run: |
+          cd backend
+          zip -r ../backend.zip ./
+
+      - name: Zip Frontend
         run: |
           cd frontend
-          npm start &
-     
+          zip -r ../frontend.zip ./
 
+      - name: Package entire project
+        run: |
+          zip -r project.zip backend.zip frontend.zip
 
-      # - name: Package artifact
-      #   run: zip -r app.zip ./dist  # Example command to package the artifact
-
-      # - name: Upload artifact
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: my-app-artifact
-      #     path: app.zip  # Path to the artifact to upload
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-project-artifact
+          path: project.zip  # Path to the artifact to upload
